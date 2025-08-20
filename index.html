@@ -1,182 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAT Cargo VAD LLC</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-        nav {
-            background: #000;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px;
-            background: #111;
-            color: #fff;
-            min-height: 100vh;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .hero-text {
-            max-width: 500px;
-            padding: 20px;
-            animation: slideInLeft 1.5s ease;
-        }
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .hero-img img {
-            max-width: 400px;
-            width: 100%;
-            border-radius: 10px;
-            animation: slideInRight 1.5s ease;
-        }
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
-        }
-        .contact {
-            background: #e9e9e9;
-            padding: 60px 20px;
-        }
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideInRight {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CANYUE CAFE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #222;
+    }
+    header {
+      background-color: #1e3d8f;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 40px;
+      background-color: #f8f8f8;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      height: 250px;
+      object-fit: cover;
+    }
+    footer {
+      background-color: #1e3d8f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>CANYUE CAFE</h1>
+    <p>Accommodation & Food Services - Cafe</p>
+  </header>
 
-    <nav>
-        <div class="logo">PAT Cargo VAD LLC</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hero" id="home">
-        <div class="hero-text">
-            <h1>PAT Cargo VAD LLC</h1>
-            <p>Your trusted partner in transportation and warehousing. We provide reliable cargo services and storage solutions to meet your business needs with efficiency and care.</p>
-        </div>
-        <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=934&q=80" alt="Cargo Services">
-        </div>
+  <section class="hero">
+    <div>
+      <h2>Welcome to CANYUE CAFE</h2>
+      <p>Located at 352 S Indian Hill Blvd, Claremont, CA 91711.  
+      We serve fresh meals, drinks, and a cozy environment for everyone.  
+      Our services are being prepared and will be available soon!</p>
+      <p><strong>Email:</strong> contact@canyuec.shop</p>
+      <p><strong>Phone:</strong> 660-650-2021</p>
     </div>
-
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p>PAT Cargo VAD LLC is a Domestic LLC based in Arizona, offering specialized services in transportation and warehousing. With a focus on reliability and customer satisfaction, we have been serving businesses since 2021.</p>
-        <p><strong>Registered Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
+    <div>
+      <img src="https://s3-media2.fl.yelpcdn.com/bphoto/Qc7nU13XToKqLsD_sRk4zQ/o.jpg" alt="Cafe Image">
     </div>
+  </section>
 
-    <div class="section contact" id="contact">
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:contact@patcargovadllc.click">contact@patcargovadllc.click</a></p>
-        <p><strong>Agent Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
-    </div>
+  <section class="content">
+    <h2>Our Story</h2>
+    <p>CANYUE CAFE is part of the <b>Accommodation and Food Services</b> industry.  
+    From hot drinks to delicious meals, we’re building a place where taste and comfort meet.  
+    Service coming soon — stay tuned for our opening!</p>
+  </section>
 
-    <footer>
-        &copy; 2025 PAT Cargo VAD LLC. All rights reserved.
-    </footer>
+  <section class="gallery">
+    <img src="https://avatars.mds.yandex.net/i?id=67d9e9a75fd9244778ad1573e0915b8e_l-5235619-images-thumbs&ref=rim&n=13&w=1600&h=1200" alt="Cafe photo 1">
+    <img src="https://avatars.mds.yandex.net/i?id=1a2d101f9d74efe2e3467ebdb3c3c639_l-7086430-images-thumbs&ref=rim&n=13&w=1920&h=1080" alt="Cafe photo 2">
+    <img src="https://images.news18.com/tamil/uploads/2022/07/Buffet-165828946116x9.jpg" alt="Buffet photo">
+    <img src="https://miro.medium.com/v2/resize:fit:1000/1*oy6XQJUcRvAHseLU2LdSXw.jpeg" alt="Cafe interior">
+  </section>
 
-    <script>
-        // Intersection Observer for fade-in effect
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-
+  <footer>
+    <p>&copy; 2025 CANYUE CAFE</p>
+    <p>352 S Indian Hill Blvd, Claremont, CA 91711</p>
+    <p>Email: contact@canyuec.shop | Phone: 660-650-2021</p>
+  </footer>
 </body>
 </html>
